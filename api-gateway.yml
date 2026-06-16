@@ -11,4 +11,15 @@ spring:
         - id: ms1-coordenador-route
           uri: lb://MS1-COORDENADOR
           predicates:
-            - Path=/chat/**
+            - Path=/api/ms1/**
+          filters:
+            - RewritePath=/api/ms1/(?<segment>.*), /chat/$\{segment}
+
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
