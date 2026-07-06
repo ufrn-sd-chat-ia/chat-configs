@@ -7,13 +7,6 @@ spring:
       discovery:
         locator:
           enabled: true
-      routes:
-        - id: ms1-coordenador-route
-          uri: lb://MS1-COORDENADOR
-          predicates:
-            - Path=/api/ms1/**
-          filters:
-            - RewritePath=/api/ms1/(?<segment>.*), /chat/$\{segment}
 
 management:
   endpoint:
@@ -22,4 +15,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: health,info,gateway
