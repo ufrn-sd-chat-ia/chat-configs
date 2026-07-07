@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5433/boletim}
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5434/boletim}
     username: ${POSTGRES_USER:boletim}
     password: ${POSTGRES_PASSWORD:boletim}
   jpa:

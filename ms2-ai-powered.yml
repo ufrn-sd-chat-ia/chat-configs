@@ -1,6 +1,10 @@
 server:
   port: 8082
 
+mcp:
+  academico:
+    url: http://localhost:8084
+
 spring:
   graphql:
     graphiql:
