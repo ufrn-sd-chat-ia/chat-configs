@@ -49,7 +49,7 @@ resilience4j:
   ratelimiter:
     instances:
       notas-lancamento:
-        limit-for-period: 5
+        limit-for-period: 50
         limit-refresh-period: 1s
         timeout-duration: 0s
       pergunta:
