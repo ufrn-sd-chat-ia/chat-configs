@@ -7,13 +7,6 @@ spring:
       discovery:
         locator:
           enabled: true
-          # Só o MS1 (coordenador) ganha rota dinâmica pelo Gateway -- MS2, MS3 e o
-          # mcp-server-academico ficam de fora de propósito. Sem isso, qualquer um
-          # descobre "/MS2-AI-POWERED/ia/perguntar" e chama a rota de IA direto no
-          # MS2, sem passar pelo @RateLimiter/@CircuitBreaker que só existem no MS1
-          # -- furando a proteção de custo/disponibilidade por completo (MS2 não
-          # tem Resilience4j nenhum). O MS1 continua sendo o único ponto de entrada
-          # "público" de verdade; os outros serviços só devem ser chamados por ele.
           include-expression: "serviceId=='MS1-COORDENADOR'"
       default-filters:
         - name: Retry
