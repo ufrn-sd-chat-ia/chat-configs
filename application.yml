@@ -1,4 +1,4 @@
-# Lista os 2 nós do cluster Eureka (Fase 7) -- os clientes (gateway, ms1,
+# Lista os 2 nós do cluster Eureka -- os clientes (gateway, ms1,
 # ms2, ms3, mcp-server-academico) tentam ambos e continuam funcionando se
 # um dos nós cair.
 eureka:
