@@ -12,7 +12,7 @@ eureka:
 boletim:
   avaliacao:
     frequencia-minima: 75.0
-    media-aprovacao: 6.0
+    media-aprovacao: 7.0
     media-recuperacao: 5.0
 
 management:
